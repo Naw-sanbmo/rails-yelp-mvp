@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Show page</h1>
+    <p>👨‍🍳<%= @restaurant.name %></p>
+    <p>🏣<%= @restaurant.address %></p>
+    <p>☎︎<%= @restaurant.phone_number %></p>
+    <p>🥬<%= @restaurant.category %></p>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content %></li>
+
+    <% end %>
+  </ul>
+  <%= link_to "Go to Restaurants", restaurants_path, class: "btn btn-secondary p-0"%>
+</div>

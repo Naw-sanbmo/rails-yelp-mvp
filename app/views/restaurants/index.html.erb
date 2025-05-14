@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h1>Best Restaurants in Tokyo</h1>
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+      <li>
+        <p>㊔<%= restaurant.name %></p>
+        <p>🏣<%= restaurant.address %></p>
+        <p>☎︎<%= restaurant.phone_number %></p>
+        <p>🥬<%= restaurant.category %></p>
+        <p><%= link_to "See details", restaurant_path(restaurant), class: "btn btn-secondary p-1"%></p>
+      </li>
+      <% end %>
+    </ul>
+</div>
